@@ -47,17 +47,19 @@ enum {
   PA13, //D10
   PA14, //D11
   PF0,  //D12
-  PF1,  //D13
-  PA5_2,  //D14/A0 - Duplicated for ADC use
-  PB1,  //D15/A1
+  PF1,  //D13,
+  PB1,  //D14
+  PA4_2,  //D15/A0 - Duplicated for ADC use
+  PA5_2,  //D16/A1
+  PB1_2,  //D17/A2
   PEND
 };
 
 // This must be a literal with the same value as PEND
-#define NUM_DIGITAL_PINS        16
+#define NUM_DIGITAL_PINS        18
 // This must be a literal with a value less than or equal to to MAX_ANALOG_INPUTS
-#define NUM_ANALOG_INPUTS       2
-#define NUM_ANALOG_FIRST        14
+#define NUM_ANALOG_INPUTS       3
+#define NUM_ANALOG_FIRST        15
 
 // On-board LED pin number
 #define LED_BUILTIN             4

@@ -38,8 +38,10 @@ const PinName digitalPin[] = {
   PA_14,  //D11
   PF_0,   //D12
   PF_1,   //D13
-  PA_5,   //D14/A0 - Duplicated for ADC use
-  PB_1   //D15/A1
+  PB_1,   //D14
+  PA_4,   //D15/A0 - Duplicated for ADC use
+  PA_5,   //D16/A1
+  PB_1,   //D17/A2
 };
 
 #ifdef __cplusplus
