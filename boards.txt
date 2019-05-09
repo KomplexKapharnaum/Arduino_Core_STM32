@@ -4,6 +4,7 @@ menu.pnum=Board part number
 
 menu.xserial=Serial interface
 menu.usb=USB interface
+menu.hw=Hardware version
 
 menu.opt=Optimize
 menu.upload_method=Upload method
@@ -747,7 +748,7 @@ KXKM_STM32F030.name=KXKM_STM32F030
 
 KXKM_STM32F030.build.core=arduino
 KXKM_STM32F030.build.board=KXKM_STM32F030
-KXKM_STM32F030.build.extra_flags=-D{build.product_line} {build.xSerial}
+KXKM_STM32F030.build.extra_flags=-D{build.product_line} {build.xSerial} {build.hwRev}
 
 
 # KXKM_F030F4 board
@@ -762,3 +763,9 @@ KXKM_STM32F030.menu.pnum.KXKM_F030F4.build.series=STM32F0xx
 KXKM_STM32F030.menu.pnum.KXKM_F030F4.build.product_line=STM32F030x6
 KXKM_STM32F030.menu.pnum.KXKM_F030F4.build.variant=KXKM_STM32F030F4
 KXKM_STM32F030.menu.pnum.KXKM_F030F4.build.cmsis_lib_gcc=arm_cortexM0l_math
+
+
+KXKM_STM32F030.menu.hw.v1=v1
+KXKM_STM32F030.menu.hw.v1.build.hwRev=-DHW_REVISION=1
+KXKM_STM32F030.menu.hw.v2=v2
+KXKM_STM32F030.menu.hw.v2.build.hwRev=-DHW_REVISION=2
