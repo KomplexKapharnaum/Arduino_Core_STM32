@@ -55,7 +55,7 @@ SECTIONS
     KEEP(*(.isr_vector)) /* Startup code */
     . = ALIGN(4);
   } >FLASH
-
+  
   /* The program code and other data goes into FLASH */
   .text ALIGN(4):
   {
@@ -124,7 +124,12 @@ SECTIONS
     . = ALIGN(4);
     _edata = .;        /* define a global symbol at data end */
   } >RAM AT> FLASH
-
+  
+  /* Custom section storing the board ID at the end of flash */
+  .boardIdBlock 0x8003FFC :
+  {
+    KEEP(*(.boardId)) /* keep my variable even if not referenced */
+  } >FLASH
 
   /* Uninitialized data section */
   . = ALIGN(4);
